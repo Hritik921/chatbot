@@ -1,0 +1,798 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "month",
+              "elicitationRequired": true,
+              "type": "AMAZON.Month",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1072665551316.832963452891"
+              }
+            },
+            {
+              "name": "day",
+              "elicitationRequired": true,
+              "type": "AMAZON.Ordinal",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1072665551316.1651365877965"
+              }
+            },
+            {
+              "name": "year",
+              "elicitationRequired": true,
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1072665551316.1118270007014"
+              }
+            }
+          ],
+          "name": "CaptureZodiacSignIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "language",
+              "elicitationRequired": true,
+              "type": "MovieLanguage",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1187275537602.349779419283"
+              }
+            },
+            {
+              "name": "actor",
+              "elicitationRequired": true,
+              "type": "MovieActor",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1187275537602.244069355250"
+              }
+            },
+            {
+              "name": "genre",
+              "elicitationRequired": true,
+              "type": "MovieGenre",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1187275537602.1292556681681"
+              }
+            }
+          ],
+          "name": "SuggestMovieIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "month",
+              "type": "AMAZON.Month",
+              "samples": [
+                "i was born in {month}",
+                "my birth month is {month}",
+                "{month}",
+                "in {month}",
+                "{month} {day}",
+                "{month} {day} {year}"
+              ]
+            },
+            {
+              "name": "day",
+              "type": "AMAZON.Ordinal",
+              "samples": [
+                "the {day}",
+                "{day}",
+                "{month} {day}",
+                "{month} {day} {year}"
+              ]
+            },
+            {
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "samples": [
+                "{year}",
+                "of {year}",
+                "I was born in {year}",
+                "I was born in the year {year}",
+                "year {year}",
+                "in {year}",
+                "in the year {year}",
+                "the year {year}",
+                "{month} {day} {year}",
+                "{month} {year}"
+              ]
+            }
+          ],
+          "name": "CaptureZodiacSignIntent",
+          "samples": [
+            "{year} {month}",
+            "{year} {month} {day}",
+            "{day} {month} {year}",
+            "{day} {month} ",
+            "i was born on {month} {day} {year}",
+            "I was born in {month}",
+            "I was born on {day}",
+            "I was born in {year}",
+            "I was born on october eight nineteen ninety five",
+            "{day}",
+            "{month}",
+            "{month} {year}",
+            "{month} of {year}",
+            "{day} of {month}",
+            "in the year {year}",
+            "born in {year}",
+            "for the {day} of {month}",
+            "for {month} {day}",
+            "with the {day} of {month}",
+            "for the {day} of {month} {year}",
+            "for {month} {day} {year}",
+            "{month} {day} {year}",
+            "my date of birth is the {day} of {month} {year}",
+            "I was born the {day} of {month} {year}",
+            "{day} of {month} {year}",
+            "{month} {day}",
+            "{month} the {day}",
+            "I was born the {day} of {month}",
+            "open my zodiac sign",
+            "get my zodiac sign",
+            "find out what my zodiac sign is",
+            "do you know what my zodiac sign is",
+            "zodiac sign",
+            "want to know my zodiac sign",
+            "can you tell my zodiac sign",
+            "can you tell me what my zodiac sign is",
+            "what is your take on my zodiac sign",
+            "say my zodiac sign",
+            "tell my zodiac sign once more",
+            "please repeat my zodiac sign",
+            "please state my zodiac sign once more",
+            "i was born on  {day}  {month}  {year} what is my zodiac sign",
+            "tell zodiac sign for my birthday",
+            "for my birthday please tell me my zodiac sign",
+            "tell me my birthday zodiac sign",
+            "tell me my zodiac sign for my birthday",
+            "let me know my zodiac sign",
+            "please tell me what my zodiac sign is based on my birthday",
+            "could you please tell me what my zodiac sign is",
+            "whats the zodiac sign"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "language",
+              "type": "MovieLanguage",
+              "samples": [
+                "{language}"
+              ]
+            },
+            {
+              "name": "actor",
+              "type": "MovieActor",
+              "samples": [
+                "{actor}"
+              ]
+            },
+            {
+              "name": "genre",
+              "type": "MovieGenre",
+              "samples": [
+                "{genre}"
+              ]
+            }
+          ],
+          "name": "SuggestMovieIntent",
+          "samples": [
+            "get me a movie",
+            "suggest movie",
+            "{language} {genre} {actor}",
+            "{genre}",
+            "{actor}",
+            "{language}",
+            "suggest me a movie",
+            "recommend me a movie",
+            "recommend a movie",
+            "suggest a movie",
+            "{language} movies with {actor}",
+            "{genre} films in {language}",
+            "{language} dramas featuring {actor}",
+            "{genre} movies by {actor}",
+            "{actor} films in {language} language",
+            "{language} comedies featuring {actor}",
+            "{language} adventures with {actor}",
+            "{genre} flicks in {language}",
+            "{actor} movies in {language}",
+            "{language} mysteries starring {actor}",
+            "{genre} films with {actor} in {language}",
+            "{language} horrors featuring {actor}",
+            "{genre} blockbusters in {language}",
+            "{actor} flicks in {language} language",
+            "{language} romances starring {actor}",
+            "{genre} masterpieces with {actor}",
+            "{language} sci-fi movies featuring {actor}",
+            "{genre} epics in {language}",
+            "{actor} gems in {language}",
+            "{language} documentaries with {actor}",
+            "{genre} classics starring {actor} in {language}",
+            "{language} animations featuring {actor}",
+            "{genre} thrillers in {language}",
+            "{actor} hits in {language} language",
+            "{language} fantasies starring {actor}",
+            "{genre} comedies with {actor}",
+            "{language} adventures in {genre}",
+            "{actor} dramas in {language}",
+            "{language} rom-coms with {actor}",
+            "{genre} movies starring {actor} in {language}",
+            "{language} horrors in {genre}",
+            "{actor} blockbusters in {language}",
+            "{language} mysteries in {genre}",
+            "{actor} flicks in {genre}",
+            "{language} sci-fi in {actor} movies",
+            "{genre} epics with {actor}",
+            "{language} documentaries by {actor}",
+            "{genre} classics in {language}",
+            "{actor} animations in {language}",
+            "{language} thrillers with {actor}",
+            "{genre} fantasies featuring {actor}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Action"
+              }
+            },
+            {
+              "name": {
+                "value": "Comedy"
+              }
+            },
+            {
+              "name": {
+                "value": "Drama"
+              }
+            },
+            {
+              "name": {
+                "value": "Thriller"
+              }
+            },
+            {
+              "name": {
+                "value": "Science Fiction"
+              }
+            },
+            {
+              "name": {
+                "value": "Fantasy"
+              }
+            },
+            {
+              "name": {
+                "value": "Adventure"
+              }
+            },
+            {
+              "name": {
+                "value": "Horror"
+              }
+            },
+            {
+              "name": {
+                "value": "Family"
+              }
+            },
+            {
+              "name": {
+                "value": "Animation"
+              }
+            },
+            {
+              "name": {
+                "value": "Romance"
+              }
+            },
+            {
+              "name": {
+                "value": "War"
+              }
+            },
+            {
+              "name": {
+                "value": "Crime"
+              }
+            },
+            {
+              "name": {
+                "value": "Music"
+              }
+            },
+            {
+              "name": {
+                "value": "Biography"
+              }
+            },
+            {
+              "name": {
+                "value": "History"
+              }
+            },
+            {
+              "name": {
+                "value": "Mystery"
+              }
+            },
+            {
+              "name": {
+                "value": "Western"
+              }
+            },
+            {
+              "name": {
+                "value": "Sport"
+              }
+            },
+            {
+              "name": {
+                "value": "Musical"
+              }
+            },
+            {
+              "name": {
+                "value": "Film Noir"
+              }
+            },
+            {
+              "name": {
+                "value": "Sci-Fi"
+              }
+            }
+          ],
+          "name": "MovieGenre"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Hindi"
+              }
+            },
+            {
+              "name": {
+                "value": "English"
+              }
+            },
+            {
+              "name": {
+                "value": "Spanish"
+              }
+            }
+          ],
+          "name": "MovieLanguage"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Penélope Cruz"
+              }
+            },
+            {
+              "name": {
+                "value": "Antonio Banderas"
+              }
+            },
+            {
+              "name": {
+                "value": "Javier Bardem"
+              }
+            },
+            {
+              "name": {
+                "value": "Salma Hayek"
+              }
+            },
+            {
+              "name": {
+                "value": "Guillermo del Toro"
+              }
+            },
+            {
+              "name": {
+                "value": "Blanca Suárez"
+              }
+            },
+            {
+              "name": {
+                "value": "Pedro Almodóvar"
+              }
+            },
+            {
+              "name": {
+                "value": "Paco Plaza"
+              }
+            },
+            {
+              "name": {
+                "value": "Paz Vega"
+              }
+            },
+            {
+              "name": {
+                "value": "Fernando Trueba"
+              }
+            },
+            {
+              "name": {
+                "value": "Viggo Mortensen"
+              }
+            },
+            {
+              "name": {
+                "value": "Eduardo Noriega"
+              }
+            },
+            {
+              "name": {
+                "value": "Alfonso Cuarón"
+              }
+            },
+            {
+              "name": {
+                "value": "Diego Luna"
+              }
+            },
+            {
+              "name": {
+                "value": "Gael García Bernal"
+              }
+            },
+            {
+              "name": {
+                "value": "Maribel Verdú"
+              }
+            },
+            {
+              "name": {
+                "value": "Emilio Estevez"
+              }
+            },
+            {
+              "name": {
+                "value": "Diego Boneta"
+              }
+            },
+            {
+              "name": {
+                "value": "Shah Rukh Khan"
+              }
+            },
+            {
+              "name": {
+                "value": "Amitabh Bachchan"
+              }
+            },
+            {
+              "name": {
+                "value": "Irrfan Khan"
+              }
+            },
+            {
+              "name": {
+                "value": "Aamir Khan"
+              }
+            },
+            {
+              "name": {
+                "value": "Ranbir Kapoor"
+              }
+            },
+            {
+              "name": {
+                "value": "Priyanka Chopra"
+              }
+            },
+            {
+              "name": {
+                "value": "Akshay Kumar"
+              }
+            },
+            {
+              "name": {
+                "value": "Kajol"
+              }
+            },
+            {
+              "name": {
+                "value": "Amir Khan"
+              }
+            },
+            {
+              "name": {
+                "value": "Hrithik Roshan"
+              }
+            },
+            {
+              "name": {
+                "value": "Salman Khan"
+              }
+            },
+            {
+              "name": {
+                "value": "Sunny Deol"
+              }
+            },
+            {
+              "name": {
+                "value": "Leonardo DiCaprio"
+              }
+            },
+            {
+              "name": {
+                "value": "Tom Hanks"
+              }
+            },
+            {
+              "name": {
+                "value": "Robert De Niro"
+              }
+            },
+            {
+              "name": {
+                "value": "Harrison Ford"
+              }
+            },
+            {
+              "name": {
+                "value": "Jim Carrey"
+              }
+            },
+            {
+              "name": {
+                "value": "Brad Pitt"
+              }
+            },
+            {
+              "name": {
+                "value": "Anthony Hopkins"
+              }
+            },
+            {
+              "name": {
+                "value": "Johnny Depp"
+              }
+            },
+            {
+              "name": {
+                "value": "Al Pacino"
+              }
+            },
+            {
+              "name": {
+                "value": "Bruce Willis"
+              }
+            },
+            {
+              "name": {
+                "value": "Will Ferrell"
+              }
+            },
+            {
+              "name": {
+                "value": "Meryl Streep"
+              }
+            },
+            {
+              "name": {
+                "value": "Christian Bale"
+              }
+            },
+            {
+              "name": {
+                "value": "Ryan Gosling"
+              }
+            },
+            {
+              "name": {
+                "value": "Jamie Lee Curtis"
+              }
+            },
+            {
+              "name": {
+                "value": "Keanu Reeves"
+              }
+            },
+            {
+              "name": {
+                "value": "Sigourney Weaver"
+              }
+            },
+            {
+              "name": {
+                "value": "Daniel Radcliffe"
+              }
+            },
+            {
+              "name": {
+                "value": "Morgan Freeman"
+              }
+            },
+            {
+              "name": {
+                "value": "Jamie Foxx"
+              }
+            },
+            {
+              "name": {
+                "value": "Mel Gibson"
+              }
+            },
+            {
+              "name": {
+                "value": "Rami Malek"
+              }
+            },
+            {
+              "name": {
+                "value": "Steve Carell"
+              }
+            },
+            {
+              "name": {
+                "value": "Heath Ledger"
+              }
+            },
+            {
+              "name": {
+                "value": "Jodie Foster"
+              }
+            },
+            {
+              "name": {
+                "value": "Julia Roberts"
+              }
+            },
+            {
+              "name": {
+                "value": "Jack Nicholson"
+              }
+            },
+            {
+              "name": {
+                "value": "Sylvester Stallone"
+              }
+            },
+            {
+              "name": {
+                "value": "Elijah Wood"
+              }
+            },
+            {
+              "name": {
+                "value": "Arnold Schwarzenegger"
+              }
+            },
+            {
+              "name": {
+                "value": "Jake Gyllenhaal"
+              }
+            },
+            {
+              "name": {
+                "value": "Eddie Redmayne"
+              }
+            },
+            {
+              "name": {
+                "value": "Russell Crowe"
+              }
+            }
+          ],
+          "name": "MovieActor"
+        }
+      ],
+      "invocationName": "get chatbot project"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": " {month}"
+          }
+        ],
+        "id": "Elicit.Slot.792814226298.1447308559990"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What month were you born ?"
+          }
+        ],
+        "id": "Elicit.Slot.1072665551316.832963452891"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What day were you born ?"
+          }
+        ],
+        "id": "Elicit.Slot.1072665551316.1651365877965"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What year were you born ?"
+          }
+        ],
+        "id": "Elicit.Slot.1072665551316.1118270007014"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please tell the movie language for e.g.  English,Hindi,Spanish"
+          }
+        ],
+        "id": "Elicit.Slot.1187275537602.349779419283"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please give the Actor name e.g. Shah Rukh Khan,Tom Hanks,Aamir Khan"
+          }
+        ],
+        "id": "Elicit.Slot.1187275537602.244069355250"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please provide the genre for e.g. Mystery,Romance,Comedy,Drama"
+          }
+        ],
+        "id": "Elicit.Slot.1187275537602.1292556681681"
+      }
+    ]
+  }
+}
